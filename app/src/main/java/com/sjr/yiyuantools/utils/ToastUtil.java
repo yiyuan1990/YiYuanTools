@@ -10,7 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.sjr.yiyuantools.R;
-import com.sjr.yiyuantools.base.YiYuanApplication;
+import com.sjr.yiyuantools.api.YiYuanApp;
 
 
 public class ToastUtil {
@@ -18,19 +18,19 @@ public class ToastUtil {
     private static TextView stoast;
 
     public static void showShortToast(String msg) {
-        showCustomToast(YiYuanApplication.getContext(), msg, Toast.LENGTH_SHORT);
+        showCustomToast(YiYuanApp.getContext(), msg, Toast.LENGTH_SHORT);
     }
 
     public static void showShortToast(int msgId) {
-        showCustomToast(YiYuanApplication.getContext(), msgId, Toast.LENGTH_SHORT);
+        showCustomToast(YiYuanApp.getContext(), msgId, Toast.LENGTH_SHORT);
     }
 
     public static void showLongToast(String msg) {
-        showCustomToast(YiYuanApplication.getContext(), msg, Toast.LENGTH_LONG);
+        showCustomToast(YiYuanApp.getContext(), msg, Toast.LENGTH_LONG);
     }
 
     public static void showLongToast(int msgId) {
-        showCustomToast(YiYuanApplication.getContext(), msgId, Toast.LENGTH_LONG);
+        showCustomToast(YiYuanApp.getContext(), msgId, Toast.LENGTH_LONG);
     }
 
     public static void showToastInUiThread(final Activity activity, final String msg) {
