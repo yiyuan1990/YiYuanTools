@@ -16,8 +16,7 @@ import java.util.List;
 import retrofit2.http.GET;
 
 /**
- * 作者：senon on 2017/12/27 10:34
- * 邮箱：a1083911695@163.com
+ * 登录 退出
  */
 public class LoginPresenter extends LoginContract.Presenter {
 
@@ -31,40 +30,22 @@ public class LoginPresenter extends LoginContract.Presenter {
 
     @Override
     public void login(HashMap<String, String> map, boolean isDialog, boolean cancelable) {
-        model.login(context, map, isDialog, cancelable, getView().bindLifecycle(),new ObserverResponseListener() {
+        model.login(context, map, isDialog, cancelable, getView().bindLifecycle(), new ObserverResponseListener() {
             @Override
             public void onNext(Object o) {
                 //这一步是必须的，判断view是否已经被销毁
-                if(getView() != null){
-                    getView().result((BaseResponse<List<Login>>) o);
-                    getView().setMsg("请求成功");
-                }
-            }
-            @Override
-            public void onError(ExceptionHandle.ResponeThrowable e) {
-                if(getView() != null){
-                //// TODO: 2017/12/28 自定义处理异常
-                ToastUtil.showShortToast(ExceptionHandle.handleException(e).message);
-                }
-            }
-        });
-    }
+                if (getView() != null) {
 
-    @Override
-    public void logout(HashMap<String, String> map, boolean isDialog, boolean cancelable) {
-        model.logout(context, map, isDialog, cancelable, getView().bindLifecycle(),new ObserverResponseListener() {
-            @Override
-            public void onNext(Object o) {
-                //这一步是必须的，判断view是否已经被销毁
-                if(getView() != null){
-                    getView().logoutResult((BaseResponse<List<Login>>) o);
-                    getView().setMsg("请求成功");
+                    getView().result((BaseResponse<Login>) o);
                 }
             }
+
             @Override
             public void onError(ExceptionHandle.ResponeThrowable e) {
-                if(getView() != null){
+                if (getView() != null) {
+                    //// TODO: 2017/12/28 自定义处理异常
                     ToastUtil.showShortToast(ExceptionHandle.handleException(e).message);
+                    getView().err(999);
                 }
             }
         });

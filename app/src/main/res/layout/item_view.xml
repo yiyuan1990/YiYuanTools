@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:src="@mipmap/ic_hot" />
+
+        <TextView
+            android:id="@+id/tvOne"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="河北省首届“中国农民丰收节”在沙河市红石沟生态农场隆重举行。来自全省11个地市的2000多名新型"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:src="@mipmap/ic_hot" />
+
+        <TextView
+            android:id="@+id/tvTwo"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="2018年天水花牛苹果集团新果上市助力脱贫攻坚暨全国线上线下各大友商签约发布会”于2018年8月28日在天水市麦积区花牛苹果产业园隆重召开"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</LinearLayout>

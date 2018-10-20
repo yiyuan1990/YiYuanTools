@@ -1,7 +1,6 @@
 package com.sjr.yiyuantools.contract;
 
 
-
 import com.sjr.yiyuantools.base.BasePresenter;
 import com.sjr.yiyuantools.base.BaseResponse;
 import com.sjr.yiyuantools.base.BaseView;
@@ -19,11 +18,9 @@ public interface LoginContract {
 
     interface View extends BaseView {
 
-        void result(BaseResponse<List<Login>> data);
+        void result(BaseResponse<Login> data);
 
-        void logoutResult(BaseResponse<List<Login>> data);
-
-        void setMsg(String msg);
+        void err(int err);
 
         <T> ObservableTransformer<T, T> bindLifecycle();
 
@@ -31,10 +28,7 @@ public interface LoginContract {
 
     abstract class Presenter extends BasePresenter<View> {
 
-        //请求1
         public abstract void login(HashMap<String, String> map, boolean isDialog, boolean cancelable);
 
-        //请求2
-        public abstract void logout(HashMap<String, String> map, boolean isDialog, boolean cancelable);
     }
 }

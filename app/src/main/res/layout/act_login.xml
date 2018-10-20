@@ -1,7 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:round="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-</LinearLayout>
+    <com.sjr.yiyuantools.customview.RxAutoImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:ImageSrc="@mipmap/b">
+
+    </com.sjr.yiyuantools.customview.RxAutoImageView>
+
+
+    <EditText
+        android:id="@+id/etPw"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/login_Left"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="@dimen/login_Right"
+        android:background="@null"
+        android:hint="@string/login_pw_hint"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:paddingLeft="30dp"
+        android:textColor="@color/light_white"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/text_size_normal"
+        android:textStyle="italic" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/etPw"
+        android:layout_marginLeft="@dimen/login_Left"
+        android:layout_marginRight="@dimen/login_Right"
+        android:background="@color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/etUserName"
+        android:layout_marginLeft="@dimen/login_Left"
+        android:layout_marginRight="@dimen/login_Right"
+        android:background="@color/white" />
+
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@id/etPw"
+        android:layout_marginLeft="@dimen/login_Right"
+        android:layout_marginRight="@dimen/login_Right"
+        android:background="@null"
+        android:hint="@string/login_user_hint"
+        android:maxLines="1"
+        android:paddingLeft="30dp"
+        android:textColor="@color/white"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/text_size_normal"
+        android:textStyle="italic" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignLeft="@id/etUserName"
+        android:layout_alignBottom="@id/etUserName"
+        android:layout_marginBottom="18dp"
+        android:background="@mipmap/ic_login_name" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignLeft="@id/etPw"
+        android:layout_alignBottom="@id/etPw"
+        android:layout_marginBottom="18dp"
+        android:background="@mipmap/ic_pass_word" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/etPw"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/login_btn_Left"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="@dimen/login_btn_Right"
+        android:background="@drawable/circular_green_bg"
+        android:text="@string/login_btn_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_normal"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnLogin"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:text="----------------------------------------------"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/other_login"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:text="----------------------------------------------"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btnWeChat"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/we_chat_bg"
+            android:padding="10dp"
+            android:src="@mipmap/ic_we_chat" />
+
+        <TextView
+            android:id="@+id/free_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/free_login_bg"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:text="免账号密码登录"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!--<ImageView-->
+    <!--android:id="@+id/btnWeChat"-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_below="@id/ll"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:background="@drawable/we_chat_bg"-->
+    <!--android:padding="10dp"-->
+    <!--android:src="@mipmap/ic_we_chat" />-->
+
+
+</RelativeLayout>

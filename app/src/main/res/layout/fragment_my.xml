@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:round="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <View
+                android:id="@+id/vv"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@mipmap/bg_top_mine_a">
+
+            </View>
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="@dimen/dp_30"-->
+                <!--android:layout_marginTop="@dimen/dp_50">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/ivVip"-->
+                    <!--android:layout_width="@dimen/dp_35"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="@mipmap/vip" />-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/ivVipNum"-->
+                    <!--android:layout_width="@dimen/dp_12"-->
+                    <!--android:layout_height="@dimen/dp_15"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:layout_marginBottom="2dp"-->
+                    <!--android:layout_toRightOf="@id/ivVip"-->
+                    <!--android:background="@mipmap/vip_5" />-->
+
+            <!--</RelativeLayout>-->
+
+
+            <!--<TextView-->
+                <!--android:id="@+id/tvVip"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="@dimen/dp_25"-->
+                <!--android:layout_marginLeft="-1dp"-->
+                <!--android:layout_marginTop="@dimen/dp_50"-->
+                <!--android:background="@drawable/text_lv_bg"-->
+                <!--android:gravity="center"-->
+                <!--android:paddingLeft="@dimen/dp_15"-->
+                <!--android:paddingRight="@dimen/dp_15"-->
+                <!--android:text="LV 0"-->
+                <!--android:textColor="@color/light_red_a"-->
+                <!--android:textSize="@dimen/sp_14"-->
+                <!--android:textStyle="italic"-->
+                <!--android:visibility="gone" />-->
+
+            <com.sjr.yiyuantools.customview.RoundAngleImageView
+                android:id="@+id/rivUserHeader"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="@color/white"
+                android:padding="1px"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/user_header_base"
+                round:roundHeight2="35dp"
+                round:roundWidth2="35dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rivUserHeader"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="yiyuan"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16" />
+
+                <com.sjr.yiyuantools.customview.RoundAngleImageView
+                    android:id="@+id/ivSex"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/white"
+                    android:src="@mipmap/ic_man"
+                    round:roundHeight2="7dp"
+                    round:roundWidth2="7dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_alignBottom="@id/vv"
+                android:background="@color/light_gray_a"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/llTabOne"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTabOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textColor="@color/light_gray_c"
+                        android:textSize="@dimen/sp_14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="我的关注"
+                        android:textColor="@color/light_gray_c"
+                        android:textSize="@dimen/sp_14" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/light_gray_c" />
+
+                <LinearLayout
+                    android:id="@+id/llTabTwo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTabTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12"
+                        android:textColor="@color/light_gray_c"
+                        android:textSize="@dimen/sp_14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="我的需求"
+                        android:textColor="@color/light_gray_c"
+                        android:textSize="@dimen/sp_14" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/light_gray_c" />
+
+                <LinearLayout
+                    android:id="@+id/llTabThree"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTabThree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="128"
+                        android:textColor="@color/light_gray_c"
+                        android:textSize="@dimen/sp_14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="我的评论"
+                        android:textColor="@color/light_gray_c"
+                        android:textSize="@dimen/sp_14" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvMine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vv"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:visibility="visible">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <View
+                android:id="@+id/v2"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@id/rvMine"
+                android:background="@color/light_gray_c" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvMineTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/v2"
+                android:paddingLeft="16dp"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingRight="16dp"
+                android:paddingBottom="30dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RxAutoImageView">
+        <attr name="ImageSrc" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="RoundImageView">
+        <attr name="borderRadius" format="dimension" />
+        <attr name="type">
+            <enum name="circle" value="0" />
+            <enum name="round" value="1" />
+            <enum name="multi" value="3" />
+        </attr>
+        <attr name="angleCount" format="integer" />
+        <attr name="currentAngle" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundAngleImageView">
+        <attr name="roundWidth2" format="dimension" />
+        <attr name="roundHeight2" format="dimension" />
+        <attr name="leftUpCorner" format="boolean" />
+        <attr name="rightUpCorner" format="boolean" />
+        <attr name="leftDownCorner" format="boolean" />
+        <attr name="rightDownCorner" format="boolean" />
+    </declare-styleable>
+</resources>

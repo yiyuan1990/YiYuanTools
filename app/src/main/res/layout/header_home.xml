@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <cn.bingoogolapple.bgabanner.BGABanner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:banner_pageChangeDuration="1000"
+        app:banner_pointAutoPlayAble="true"
+        app:banner_pointContainerBackground="@color/light_gray_a"
+        app:banner_pointDrawable="@drawable/bga_banner_selector_point_hollow"
+        app:banner_pointTopBottomMargin="15dp"
+        app:banner_tipTextSize="14sp"
+        app:banner_transitionEffect="alpha" />
+    <!--android:background="@drawable/white_circular_bg"-->
+    <!--android:elevation="2dp"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginTop="-10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_marginBottom="5dp"-->
+    <LinearLayout
+        android:id="@+id/llRv"
+        android:layout_width="match_parent"
+        android:layout_height="164dp"
+        android:layout_below="@id/banner"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvTab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/llRv"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="6dp"
+            android:padding="5dp"
+            android:src="@mipmap/ic_top" />
+
+        <com.sjr.yiyuantools.customview.TextViewVerticalMore
+            android:id="@+id/tvm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/iv">
+
+        </com.sjr.yiyuantools.customview.TextViewVerticalMore>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_below="@id/rl"
+        android:background="@color/light_gray_c" />
+
+
+</RelativeLayout>

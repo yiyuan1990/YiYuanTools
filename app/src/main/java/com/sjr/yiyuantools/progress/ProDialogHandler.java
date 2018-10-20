@@ -15,6 +15,7 @@ public class ProDialogHandler extends Handler {
     public static final int SHOW_PROGRESS_DIALOG = 1;
     public static final int DISMISS_PROGRESS_DIALOG = 2;
 
+//    private SweetAlertDialog sad;
     private SweetAlertDialog sad;
     private Context context;
     private boolean cancelable;

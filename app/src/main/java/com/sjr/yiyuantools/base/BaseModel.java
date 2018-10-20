@@ -25,7 +25,8 @@ public class BaseModel<T> {
                 .subscribe(observer);
     }
 
-    public void subscribe(Context context, final Observable observable, ObserverResponseListener<T> listener, ObservableTransformer<T, T> transformer) {
+    public void subscribe(Context context, final Observable observable, ObserverResponseListener<T> listener,
+                          ObservableTransformer<T, T> transformer) {
         subscribe(context, observable, listener, transformer, true, true);
     }
 }

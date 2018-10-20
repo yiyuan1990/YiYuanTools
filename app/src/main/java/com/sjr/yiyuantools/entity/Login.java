@@ -1,50 +1,47 @@
 package com.sjr.yiyuantools.entity;
 
 public class Login {
-    private String time;
-    private String ftime;
-    private String context;
-    private Object location;
+    /**
+     * err_code : 1
+     * err_msg : 登录失败，用户名不存在或密码错误
+     * uuid :
+     * token :
+     */
 
-    public String getTime() {
-        return time;
+    private int err_code;
+    private String err_msg;
+    private String uuid;
+    private String token;
+
+    public int getErr_code() {
+        return err_code;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setErr_code(int err_code) {
+        this.err_code = err_code;
     }
 
-    public String getFtime() {
-        return ftime;
+    public String getErr_msg() {
+        return err_msg;
     }
 
-    public void setFtime(String ftime) {
-        this.ftime = ftime;
+    public void setErr_msg(String err_msg) {
+        this.err_msg = err_msg;
     }
 
-    public String getContext() {
-        return context;
+    public String getUuid() {
+        return uuid;
     }
 
-    public void setContext(String context) {
-        this.context = context;
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
     }
 
-    public Object getLocation() {
-        return location;
+    public String getToken() {
+        return token;
     }
 
-    public void setLocation(Object location) {
-        this.location = location;
-    }
-
-    @Override
-    public String toString() {
-        return "Login{" +
-                "time='" + time + '\'' +
-                ", ftime='" + ftime + '\'' +
-                ", context='" + context + '\'' +
-                ", location=" + location +
-                '}';
+    public void setToken(String token) {
+        this.token = token;
     }
 }

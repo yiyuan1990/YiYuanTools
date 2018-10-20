@@ -1,7 +1,10 @@
 package com.sjr.yiyuantools.base;
 
 import android.os.Bundle;
+import android.view.Window;
 
+import com.sjr.yiyuantools.api.ActsManager;
+import com.sjr.yiyuantools.common.statusbar.TranslucentBarManager;
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
 import butterknife.ButterKnife;
@@ -24,8 +27,12 @@ public abstract class BaseActivity<V extends BaseView, P extends BasePresenter<V
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
+        TranslucentBarManager translucentBarManager = new TranslucentBarManager(this);
+        translucentBarManager.transparent(this);
         setContentView(getLayoutId());
         ButterKnife.bind(this);
+        ActsManager.getAppManager().addActivity(this);
         if (presenter == null) {
             presenter = createPresenter();
         }
@@ -55,5 +62,6 @@ public abstract class BaseActivity<V extends BaseView, P extends BasePresenter<V
         if (presenter != null) {
             presenter.detachView();
         }
+        ActsManager.getAppManager().removeCurrentActivity();
     }
 }

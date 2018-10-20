@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:round="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    android:orientation="horizontal"
+    android:paddingLeft="5dp"
+    android:paddingTop="5dp"
+    android:paddingRight="5dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="3dp"
+            android:layout_weight="0.3"
+            android:background="@drawable/tab_circular_line"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/rv_information" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:gravity="center"
+                android:text="产品资讯"
+                android:textSize="@dimen/sp_14" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1.2">
+
+            <com.sjr.yiyuantools.customview.RoundAngleImageView
+                android:id="@+id/ivBgLeftOne"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/wel_b"
+                round:roundHeight2="@dimen/home_image_radius"
+                round:roundWidth2="@dimen/home_image_radius" />
+
+            <TextView
+                android:id="@+id/tvLeftOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bg_text"
+                android:paddingLeft="3dp"
+                android:paddingTop="5dp"
+                android:paddingRight="3dp"
+                android:paddingBottom="12dp"
+                android:text="水蜜桃价格：2元/斤，有2亩种植地，几年产量高，要提前预定的要加快了哦"
+                android:textColor="@color/light_white"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1">
+
+            <com.sjr.yiyuantools.customview.RoundAngleImageView
+                android:id="@+id/ivBgLeftTwo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/wel_b"
+                round:roundHeight2="@dimen/home_image_radius"
+                round:roundWidth2="@dimen/home_image_radius" />
+
+            <TextView
+                android:id="@+id/tvLeftTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bg_text"
+                android:paddingLeft="3dp"
+                android:paddingTop="5dp"
+                android:paddingRight="3dp"
+                android:paddingBottom="12dp"
+                android:text="土鸡蛋，有500kg，价格可谈"
+                android:textColor="@color/light_white"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1">
+
+            <com.sjr.yiyuantools.customview.RoundAngleImageView
+                android:id="@+id/ivBgRightOne"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/wel_b"
+                round:roundHeight2="@dimen/home_image_radius"
+                round:roundWidth2="@dimen/home_image_radius" />
+
+            <TextView
+                android:id="@+id/tvRightOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bg_text"
+                android:paddingLeft="3dp"
+                android:paddingTop="5dp"
+                android:paddingRight="3dp"
+                android:paddingBottom="12dp"
+                android:text="农肥种植的水果蔬菜，营养价值充足，价格优惠，欢迎大型收购商前来收购"
+                android:textColor="@color/light_white"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="3dp"
+            android:layout_weight="0.8">
+
+            <com.sjr.yiyuantools.customview.RoundAngleImageView
+                android:id="@+id/ivBgRightTwo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/wel_b"
+                round:roundHeight2="@dimen/home_image_radius"
+                round:roundWidth2="@dimen/home_image_radius" />
+
+            <TextView
+                android:id="@+id/tvRightTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bg_text"
+                android:paddingLeft="3dp"
+                android:paddingTop="5dp"
+                android:paddingRight="3dp"
+                android:paddingBottom="12dp"
+                android:text="正阳县优质花生，价格便宜，储量5吨,由于正值农忙季节，没有空闲时间，需要来本地仓库拉货"
+                android:textColor="@color/light_white"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
